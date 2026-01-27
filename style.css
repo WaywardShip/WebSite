@@ -243,10 +243,6 @@ body::before {
     animation-delay: 0.4s;
 }
 
-.about-text:nth-child(3) {
-    animation-delay: 0.6s;
-}
-
 .about-text.emphasis {
     font-size: 1.3rem;
     font-weight: 600;
@@ -307,135 +303,6 @@ body::before {
     line-height: 1.8;
 }
 
-.next-show-card {
-    background: var(--color-bg-card);
-    border: 2px solid var(--color-border);
-    border-radius: 12px;
-    padding: 3rem;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    gap: 3rem;
-    align-items: center;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.next-show-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--color-primary), transparent);
-}
-
-.next-show-card:hover {
-    border-color: var(--color-primary);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 40px rgba(255, 0, 51, 0.2);
-}
-
-.show-date {
-    text-align: center;
-    border-right: 2px solid var(--color-border);
-    padding-right: 3rem;
-}
-
-.date-day {
-    font-family: var(--font-heading);
-    font-size: 4rem;
-    line-height: 1;
-    color: var(--color-primary);
-}
-
-.date-month {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    color: var(--color-text);
-    letter-spacing: 0.2em;
-}
-
-.date-year {
-    font-size: 1rem;
-    color: var(--color-text-dim);
-}
-
-.show-details h3 {
-    font-family: var(--font-heading);
-    font-size: 2rem;
-    color: var(--color-text);
-    margin-bottom: 0.5rem;
-    letter-spacing: 0.1em;
-}
-
-.show-location,
-.show-time,
-.show-price {
-    color: var(--color-text-dim);
-    font-size: 1rem;
-    margin: 0.3rem 0;
-}
-
-.btn-tickets {
-    background: var(--color-primary);
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    font-family: var(--font-heading);
-    font-size: 1.2rem;
-    letter-spacing: 0.1em;
-    border-radius: 8px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.btn-tickets svg {
-    width: 20px;
-    height: 20px;
-}
-
-.btn-tickets:hover {
-    background: var(--color-primary-dark);
-    transform: scale(1.05);
-    box-shadow: 0 5px 20px rgba(255, 0, 51, 0.4);
-}
-
-.btn-all-dates {
-    background: transparent;
-    border: 2px solid var(--color-primary);
-    color: var(--color-primary);
-    padding: 1rem 2rem;
-    font-family: var(--font-heading);
-    font-size: 1.2rem;
-    letter-spacing: 0.1em;
-    border-radius: 8px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    margin: 2rem auto 0;
-    max-width: 300px;
-    transition: all 0.3s ease;
-}
-
-.btn-all-dates svg {
-    width: 20px;
-    height: 20px;
-}
-
-.btn-all-dates:hover {
-    background: var(--color-primary);
-    color: white;
-    transform: translateY(-2px);
-}
-
 /* ===== CONCERTS PAGE ===== */
 .page-header {
     text-align: center;
@@ -456,96 +323,6 @@ body::before {
     color: var(--color-text-dim);
     letter-spacing: 0.2em;
     margin-top: 1rem;
-}
-
-.concerts-list {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.concert-item {
-    background: var(--color-bg-card);
-    border: 2px solid var(--color-border);
-    border-radius: 12px;
-    padding: 2rem;
-    display: grid;
-    grid-template-columns: auto 1fr auto auto;
-    gap: 2rem;
-    align-items: center;
-    transition: all 0.3s ease;
-}
-
-.concert-item:hover {
-    border-color: var(--color-primary);
-    transform: translateX(10px);
-    box-shadow: -5px 0 20px rgba(255, 0, 51, 0.2);
-}
-
-.concert-date {
-    text-align: center;
-    border-right: 2px solid var(--color-border);
-    padding-right: 2rem;
-    min-width: 80px;
-}
-
-.concert-day {
-    font-family: var(--font-heading);
-    font-size: 2.5rem;
-    line-height: 1;
-    color: var(--color-primary);
-}
-
-.concert-month {
-    font-family: var(--font-heading);
-    font-size: 1rem;
-    color: var(--color-text);
-    letter-spacing: 0.1em;
-}
-
-.concert-venue {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    color: var(--color-text);
-    margin-bottom: 0.3rem;
-    letter-spacing: 0.05em;
-}
-
-.concert-location,
-.concert-time {
-    color: var(--color-text-dim);
-    font-size: 0.9rem;
-}
-
-.concert-price {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    color: var(--color-primary);
-    min-width: 100px;
-    text-align: center;
-}
-
-.concert-btn {
-    background: var(--color-primary);
-    color: white;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    font-family: var(--font-heading);
-    font-size: 1rem;
-    letter-spacing: 0.1em;
-    border-radius: 8px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-}
-
-.concert-btn:hover {
-    background: var(--color-primary-dark);
-    transform: scale(1.05);
 }
 
 /* ===== SETLIST PAGE ===== */
@@ -858,23 +635,6 @@ body::before {
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 1024px) {
-    .next-show-card {
-        grid-template-columns: auto 1fr;
-        gap: 2rem;
-    }
-    
-    .show-action {
-        grid-column: 1 / -1;
-        text-align: center;
-    }
-    
-    .btn-tickets {
-        width: 100%;
-        justify-content: center;
-    }
-}
-
 @media (max-width: 768px) {
     .main-nav {
         padding: 0 1.5rem;
@@ -891,34 +651,6 @@ body::before {
     .nav-btn {
         width: 45px;
         height: 45px;
-    }
-    
-    .next-show-card {
-        grid-template-columns: 1fr;
-        padding: 2rem;
-        text-align: center;
-    }
-    
-    .show-date {
-        border-right: none;
-        border-bottom: 2px solid var(--color-border);
-        padding-right: 0;
-        padding-bottom: 1.5rem;
-    }
-    
-    .concert-item {
-        grid-template-columns: auto 1fr;
-        gap: 1rem;
-    }
-    
-    .concert-price {
-        grid-column: 2;
-        text-align: right;
-    }
-    
-    .concert-btn {
-        grid-column: 1 / -1;
-        width: 100%;
     }
     
     .setlist-item {
@@ -945,25 +677,6 @@ body::before {
     .title-line {
         width: 100px;
         max-width: 100%;
-    }
-    
-    .concert-date {
-        border-right: none;
-        padding-right: 0;
-    }
-    
-    .concert-item {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    
-    .concert-info {
-        border-bottom: 2px solid var(--color-border);
-        padding-bottom: 1rem;
-    }
-    
-    .concert-price {
-        text-align: center;
     }
     
     .footer-social {
