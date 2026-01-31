@@ -11,6 +11,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Bebas+Neue&family=Oswald:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Audio Controls -->
+    <div class="audio-control">
+        <button id="audioToggle" class="audio-toggle" title="Musique d'ambiance">
+            <svg id="audioIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            </svg>
+        </button>
+    </div>
+
     <!-- Navigation -->
     <nav class="main-nav">
         <div class="nav-logo">
@@ -61,10 +72,10 @@
                     Composé de cinq membres uniques, chacun apportant son style et son talent, le groupe propose des reprises 
                     de metalcore et de nu metal de qualité.
                 </p>
-                <!--<p class="about-text">
+                <p class="about-text">
                     Wayward Ship revendique également une identité fortement politisée, s'opposant clairement à la droite et à 
                     l'extrême droite, qu'il dénonce sans détour et qu'il qualifie de "partie de naz* de merde".
-                </p>-->
+                </p>
             </div>
         </section>
 
@@ -105,12 +116,10 @@
                     <line x1="16" y1="2" x2="16" y2="6"></line>
                     <line x1="8" y1="2" x2="8" y2="6"></line>
                     <line x1="3" y1="10" x2="21" y2="10"></line>
-                    <line x1="8" y1="14" x2="16" y2="14"></line>
-                    <line x1="8" y1="18" x2="12" y2="18"></line>
                 </svg>
             </div>
-            <h3>Aucun concert prévu pour l'instant</h3>
-            <p>Les dates seront annoncées prochainement. Suivez-nous sur nos réseaux sociaux pour ne rien manquer !</p>
+            <h3>Aucune date de concert programmée</h3>
+            <p>Suivez-nous sur les réseaux sociaux pour ne rien manquer !</p>
         </div>
     </main>
 
@@ -118,173 +127,163 @@
     <main class="page" id="setlist">
         <div class="page-header">
             <h1 class="page-title">SETLIST</h1>
-            <div class="page-subtitle">Notre arsenal sonore</div>
+            <div class="page-subtitle">Nos reprises en live</div>
         </div>
 
         <div class="setlist-container">
-            <div class="setlist-item">
+            <div class="setlist-item" data-type="cover">
                 <div class="setlist-number">01</div>
                 <div class="setlist-info">
-                    <h3 class="setlist-song">Illuminate the Path</h3>
+                    <div class="song-header">
+                        <h3 class="setlist-song">Illuminate the Path</h3>
+                        <span class="song-badge cover-badge">COVER</span>
+                    </div>
                     <p class="setlist-artist">Arch Enemy</p>
                 </div>
                 <div class="setlist-actions">
                     <button class="platform-btn" data-query="Illuminate the Path Arch Enemy" type="button">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
-                        </svg>
+                        <img src="spotify.png" alt="Spotify" style="width: 24px; height: 24px;">
                     </button>
                     <button class="platform-btn" data-query="Illuminate the Path Arch Enemy" type="button">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M18.81 4.16v3.75h5.19V4.16zM11.54 8.32v3.75h5.19V8.32zm-7.27.4v3.75h5.19V8.72zm0 4.15v3.75h5.19v-3.75zm0 4.15v3.75h5.19v-3.75zM11.54 12.87v3.75h5.19v-3.75zm7.27-.4v3.75h5.19v-3.75zm-7.27 4.55v3.75h5.19v-3.75zm7.27 0v3.75h5.19v-3.75z"/>
-                        </svg>
+                        <img src="deezer.png" alt="Deezer" style="width: 24px; height: 24px;">
                     </button>
                 </div>
             </div>
 
-            <div class="setlist-item">
+            <div class="setlist-item" data-type="cover">
                 <div class="setlist-number">02</div>
                 <div class="setlist-info">
-                    <h3 class="setlist-song">ATWA</h3>
-                    <p class="setlist-artist">System of a Down</p>
-                </div>
-                <div class="setlist-actions">
-                    <button class="platform-btn" data-query="ATWA System of a Down" type="button">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
-                        </svg>
-                    </button>
-                    <button class="platform-btn" data-query="ATWA System of a Down" type="button">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M18.81 4.16v3.75h5.19V4.16zM11.54 8.32v3.75h5.19V8.32zm-7.27.4v3.75h5.19V8.72zm0 4.15v3.75h5.19v-3.75zm0 4.15v3.75h5.19v-3.75zM11.54 12.87v3.75h5.19v-3.75zm7.27-.4v3.75h5.19v-3.75zm-7.27 4.55v3.75h5.19v-3.75zm7.27 0v3.75h5.19v-3.75z"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-
-            <div class="setlist-item">
-                <div class="setlist-number">03</div>
-                <div class="setlist-info">
-                    <h3 class="setlist-song">Tears Don't Fall</h3>
-                    <p class="setlist-artist">Bullet for My Valentine</p>
-                </div>
-                <div class="setlist-actions">
-                    <button class="platform-btn" data-query="Tears Don't Fall Bullet for My Valentine" type="button">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
-                        </svg>
-                    </button>
-                    <button class="platform-btn" data-query="Tears Don't Fall Bullet for My Valentine" type="button">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M18.81 4.16v3.75h5.19V4.16zM11.54 8.32v3.75h5.19V8.32zm-7.27.4v3.75h5.19V8.72zm0 4.15v3.75h5.19v-3.75zm0 4.15v3.75h5.19v-3.75zM11.54 12.87v3.75h5.19v-3.75zm7.27-.4v3.75h5.19v-3.75zm-7.27 4.55v3.75h5.19v-3.75zm7.27 0v3.75h5.19v-3.75z"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-
-            <div class="setlist-item">
-                <div class="setlist-number">04</div>
-                <div class="setlist-info">
-                    <h3 class="setlist-song">Two Faced</h3>
-                    <p class="setlist-artist">Linkin Park</p>
-                </div>
-                <div class="setlist-actions">
-                    <button class="platform-btn" data-query="Two Faced Linkin Park" type="button">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
-                        </svg>
-                    </button>
-                    <button class="platform-btn" data-query="Two Faced Linkin Park" type="button">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M18.81 4.16v3.75h5.19V4.16zM11.54 8.32v3.75h5.19V8.32zm-7.27.4v3.75h5.19V8.72zm0 4.15v3.75h5.19v-3.75zm0 4.15v3.75h5.19v-3.75zM11.54 12.87v3.75h5.19v-3.75zm7.27-.4v3.75h5.19v-3.75zm-7.27 4.55v3.75h5.19v-3.75zm7.27 0v3.75h5.19v-3.75z"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-
-            <div class="setlist-item">
-                <div class="setlist-number">05</div>
-                <div class="setlist-info">
-                    <h3 class="setlist-song">Darkside</h3>
+                    <div class="song-header">
+                        <h3 class="setlist-song">Darkside</h3>
+                        <span class="song-badge cover-badge">COVER</span>
+                    </div>
                     <p class="setlist-artist">Bring Me The Horizon</p>
                 </div>
                 <div class="setlist-actions">
                     <button class="platform-btn" data-query="Darkside Bring Me The Horizon" type="button">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
-                        </svg>
+                        <img src="spotify.png" alt="Spotify" style="width: 24px; height: 24px;">
                     </button>
                     <button class="platform-btn" data-query="Darkside Bring Me The Horizon" type="button">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M18.81 4.16v3.75h5.19V4.16zM11.54 8.32v3.75h5.19V8.32zm-7.27.4v3.75h5.19V8.72zm0 4.15v3.75h5.19v-3.75zm0 4.15v3.75h5.19v-3.75zM11.54 12.87v3.75h5.19v-3.75zm7.27-.4v3.75h5.19v-3.75zm-7.27 4.55v3.75h5.19v-3.75zm7.27 0v3.75h5.19v-3.75z"/>
-                        </svg>
+                        <img src="deezer.png" alt="Deezer" style="width: 24px; height: 24px;">
                     </button>
                 </div>
             </div>
 
-            <div class="setlist-item">
-                <div class="setlist-number">06</div>
+            <div class="setlist-item" data-type="cover">
+                <div class="setlist-number">03</div>
                 <div class="setlist-info">
-                    <h3 class="setlist-song">Carrion</h3>
+                    <div class="song-header">
+                        <h3 class="setlist-song">Two Faced</h3>
+                        <span class="song-badge cover-badge">COVER</span>
+                    </div>
+                    <p class="setlist-artist">Linkin Park</p>
+                </div>
+                <div class="setlist-actions">
+                    <button class="platform-btn" data-query="Two Faced Linkin Park" type="button">
+                        <img src="spotify.png" alt="Spotify" style="width: 24px; height: 24px;">
+                    </button>
+                    <button class="platform-btn" data-query="Two Faced Linkin Park" type="button">
+                        <img src="deezer.png" alt="Deezer" style="width: 24px; height: 24px;">
+                    </button>
+                </div>
+            </div>
+
+            <div class="setlist-item" data-type="cover">
+                <div class="setlist-number">04</div>
+                <div class="setlist-info">
+                    <div class="song-header">
+                        <h3 class="setlist-song">Carrion</h3>
+                        <span class="song-badge cover-badge">COVER</span>
+                    </div>
                     <p class="setlist-artist">Parkway Drive</p>
                 </div>
                 <div class="setlist-actions">
                     <button class="platform-btn" data-query="Carrion Parkway Drive" type="button">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
-                        </svg>
+                        <img src="spotify.png" alt="Spotify" style="width: 24px; height: 24px;">
                     </button>
                     <button class="platform-btn" data-query="Carrion Parkway Drive" type="button">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M18.81 4.16v3.75h5.19V4.16zM11.54 8.32v3.75h5.19V8.32zm-7.27.4v3.75h5.19V8.72zm0 4.15v3.75h5.19v-3.75zm0 4.15v3.75h5.19v-3.75zM11.54 12.87v3.75h5.19v-3.75zm7.27-.4v3.75h5.19v-3.75zm-7.27 4.55v3.75h5.19v-3.75zm7.27 0v3.75h5.19v-3.75z"/>
-                        </svg>
+                        <img src="deezer.png" alt="Deezer" style="width: 24px; height: 24px;">
                     </button>
                 </div>
             </div>
 
-            <div class="setlist-item">
+            <div class="setlist-item" data-type="cover">
+                <div class="setlist-number">05</div>
+                <div class="setlist-info">
+                    <div class="song-header">
+                        <h3 class="setlist-song">Cirice</h3>
+                        <span class="song-badge cover-badge">COVER</span>
+                    </div>
+                    <p class="setlist-artist">Ghost</p>
+                </div>
+                <div class="setlist-actions">
+                    <button class="platform-btn" data-query="Cirice Ghost" type="button">
+                        <img src="spotify.png" alt="Spotify" style="width: 24px; height: 24px;">
+                    </button>
+                    <button class="platform-btn" data-query="Cirice Ghost" type="button">
+                        <img src="deezer.png" alt="Deezer" style="width: 24px; height: 24px;">
+                    </button>
+                </div>
+            </div>
+
+            <div class="setlist-item" data-type="cover">
+                <div class="setlist-number">06</div>
+                <div class="setlist-info">
+                    <div class="song-header">
+                        <h3 class="setlist-song">Tears Don't Fall</h3>
+                        <span class="song-badge cover-badge">COVER</span>
+                    </div>
+                    <p class="setlist-artist">Bullet for My Valentine</p>
+                </div>
+                <div class="setlist-actions">
+                    <button class="platform-btn" data-query="Tears Don't Fall Bullet for My Valentine" type="button">
+                        <img src="spotify.png" alt="Spotify" style="width: 24px; height: 24px;">
+                    </button>
+                    <button class="platform-btn" data-query="Tears Don't Fall Bullet for My Valentine" type="button">
+                        <img src="deezer.png" alt="Deezer" style="width: 24px; height: 24px;">
+                    </button>
+                </div>
+            </div>
+
+            <div class="setlist-item" data-type="cover">
                 <div class="setlist-number">07</div>
                 <div class="setlist-info">
-                    <h3 class="setlist-song">The Devil In I</h3>
+                    <div class="song-header">
+                        <h3 class="setlist-song">ATWA</h3>
+                        <span class="song-badge cover-badge">COVER</span>
+                    </div>
+                    <p class="setlist-artist">System of a Down</p>
+                </div>
+                <div class="setlist-actions">
+                    <button class="platform-btn" data-query="ATWA System of a Down" type="button">
+                        <img src="spotify.png" alt="Spotify" style="width: 24px; height: 24px;">
+                    </button>
+                    <button class="platform-btn" data-query="ATWA System of a Down" type="button">
+                        <img src="deezer.png" alt="Deezer" style="width: 24px; height: 24px;">
+                    </button>
+                </div>
+            </div>
+
+            <div class="setlist-item" data-type="cover">
+                <div class="setlist-number">08</div>
+                <div class="setlist-info">
+                    <div class="song-header">
+                        <h3 class="setlist-song">The Devil In I</h3>
+                        <span class="song-badge cover-badge">COVER</span>
+                    </div>
                     <p class="setlist-artist">Slipknot</p>
                 </div>
                 <div class="setlist-actions">
                     <button class="platform-btn" data-query="The Devil In I Slipknot" type="button">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
-                        </svg>
+                        <img src="spotify.png" alt="Spotify" style="width: 24px; height: 24px;">
                     </button>
                     <button class="platform-btn" data-query="The Devil In I Slipknot" type="button">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M18.81 4.16v3.75h5.19V4.16zM11.54 8.32v3.75h5.19V8.32zm-7.27.4v3.75h5.19V8.72zm0 4.15v3.75h5.19v-3.75zm0 4.15v3.75h5.19v-3.75zM11.54 12.87v3.75h5.19v-3.75zm7.27-.4v3.75h5.19v-3.75zm-7.27 4.55v3.75h5.19v-3.75zm7.27 0v3.75h5.19v-3.75z"/>
-                        </svg>
+                        <img src="deezer.png" alt="Deezer" style="width: 24px; height: 24px;">
                     </button>
                 </div>
             </div>
         </div>
     </main>
-
-    <!-- Platform Selection Modal -->
-    <div class="modal" id="platformModal">
-        <div class="modal-content">
-            <h2>Choisir une plateforme</h2>
-            <div class="modal-buttons">
-                <button class="modal-btn" data-choice="spotify" type="button">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
-                    </svg>
-                    Spotify
-                </button>
-                <button class="modal-btn" data-choice="deezer" type="button">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M18.81 4.16v3.75h5.19V4.16zM11.54 8.32v3.75h5.19V8.32zm-7.27.4v3.75h5.19V8.72zm0 4.15v3.75h5.19v-3.75zm0 4.15v3.75h5.19v-3.75zM11.54 12.87v3.75h5.19v-3.75zm7.27-.4v3.75h5.19v-3.75zm-7.27 4.55v3.75h5.19v-3.75zm7.27 0v3.75h5.19v-3.75z"/>
-                    </svg>
-                    Deezer
-                </button>
-            </div>
-            <button class="modal-close" type="button">Annuler</button>
-        </div>
-    </div>
 
     <!-- Legal Modals -->
     <div class="modal" id="termsModal">
@@ -372,10 +371,11 @@
             <button class="legal-link" data-modal="privacy" type="button">Politique de Confidentialité</button>
         </div>
         <div class="footer-copyright">
-            © 2026 Wayward Ship. All rights reserved.
+            <p>&copy; 2026 Wayward Ship. Tous droits réservés.</p>
         </div>
     </footer>
 
+    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
