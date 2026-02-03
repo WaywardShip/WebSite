@@ -105,7 +105,7 @@ window.addEventListener('DOMContentLoaded', function() {
     // ===== PLATFORM BUTTONS - DIRECT LINKS =====
     var platformButtons = document.querySelectorAll('.platform-btn');
     
-    platformButtons.forEach(function(btn, index) {
+    platformButtons.forEach(function(btn) {
         btn.addEventListener('click', function(e) {
             e.stopPropagation();
             sounds.click();
@@ -113,17 +113,18 @@ window.addEventListener('DOMContentLoaded', function() {
             var query = this.getAttribute('data-query');
             var url = '';
             
-            // Détecter par le SVG - Spotify a un path avec "17.34", Deezer a des rect
-            var svg = this.querySelector('svg');
-            var hasPath = svg.querySelector('path');
-            var hasRect = svg.querySelector('rect');
-            
-            if (hasPath && !hasRect) {
-                // Spotify
-                url = 'https://open.spotify.com/search/' + encodeURIComponent(query);
-            } else if (hasRect) {
-                // Deezer
-                url = 'https://www.deezer.com/search/' + encodeURIComponent(query);
+            // Détecter par l'image source
+            var img = this.querySelector('img');
+            if (img) {
+                var imgSrc = img.getAttribute('src');
+                
+                if (imgSrc.includes('spotify')) {
+                    // Spotify - lien direct vers la chanson
+                    url = 'https://open.spotify.com/search/' + encodeURIComponent(query);
+                } else if (imgSrc.includes('deezer')) {
+                    // Deezer - lien direct vers la chanson
+                    url = 'https://www.deezer.com/search/' + encodeURIComponent(query);
+                }
             }
             
             if (url) {
