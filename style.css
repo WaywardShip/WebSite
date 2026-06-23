@@ -25,6 +25,10 @@
     cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23ff0033" d="M3,3 L10,20 L13,13 L20,10 Z"/></svg>') 3 3, auto;
 }
 
+button, a, .nav-btn, .platform-btn, .modal-btn {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23ff0033" d="M12,2 L6,22 L12,18 L18,22 Z"/><circle cx="12" cy="10" r="2" fill="%23ff0033"/></svg>') 12 2, pointer !important;
+}
+
 /* ===== RESET & BASE ===== */
 * {
     margin: 0;
@@ -141,31 +145,13 @@ body::before {
 .nav-logo img {
     height: 100%;
     width: auto;
-    transition: transform 0.3s ease;
-    filter: drop-shadow(0 0 10px rgba(255, 0, 51, 0.5))
-            drop-shadow(0 0 20px rgba(255, 0, 51, 0.3))
-            drop-shadow(0 0 40px rgba(255, 0, 51, 0.2));
-    animation: logo-glow 3s infinite alternate;
+    filter: drop-shadow(0 0 20px rgba(255, 0, 51, 0.5));
+    transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .nav-logo img:hover {
+    filter: drop-shadow(0 0 30px rgba(255, 0, 51, 0.8));
     transform: scale(1.05) rotate(2deg);
-    filter: drop-shadow(0 0 15px rgba(255, 0, 51, 0.8))
-            drop-shadow(0 0 30px rgba(255, 0, 51, 0.6))
-            drop-shadow(0 0 50px rgba(255, 0, 51, 0.4));
-}
-
-@keyframes logo-glow {
-    0% {
-        filter: drop-shadow(0 0 10px rgba(255, 0, 51, 0.5))
-                drop-shadow(0 0 20px rgba(255, 0, 51, 0.3))
-                drop-shadow(0 0 40px rgba(255, 0, 51, 0.2));
-    }
-    100% {
-        filter: drop-shadow(0 0 15px rgba(255, 0, 51, 0.7))
-                drop-shadow(0 0 25px rgba(255, 0, 51, 0.5))
-                drop-shadow(0 0 50px rgba(255, 0, 51, 0.3));
-    }
 }
 
 .nav-links {
@@ -438,100 +424,39 @@ body::before {
 }
 
 .page-subtitle {
-    font-family: var(--font-body);
     font-size: 1.2rem;
     color: var(--color-text-dim);
-    letter-spacing: 0.1em;
+    letter-spacing: 0.2em;
     margin-top: 1rem;
 }
 
-.concerts-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-.concert-card {
-    background: var(--color-bg-card);
-    border: 2px solid var(--color-border);
-    border-radius: 12px;
-    padding: 2rem;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.concert-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 0, 51, 0.1), transparent);
-    transition: all 0.5s ease;
-}
-
-.concert-card:hover::before {
-    left: 100%;
-}
-
-.concert-card:hover {
-    border-color: var(--color-primary);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(255, 0, 51, 0.3);
-}
-
-.concert-date {
-    font-family: var(--font-heading);
-    font-size: 3rem;
-    color: var(--color-primary);
-    margin-bottom: 1rem;
-    letter-spacing: 0.1em;
-}
-
-.concert-info h3 {
-    font-family: var(--font-heading);
-    font-size: 1.8rem;
-    color: var(--color-text);
-    margin-bottom: 0.5rem;
-    letter-spacing: 0.05em;
-}
-
-.concert-info p {
-    color: var(--color-text-dim);
-    margin: 0.3rem 0;
-    font-size: 1rem;
-}
-
-.concert-actions {
-    margin-top: 1.5rem;
-    display: flex;
-    gap: 1rem;
-}
-
-.ticket-btn, .calendar-btn {
-    flex: 1;
+/* ===== CALENDAR BUTTON ===== */
+.calendar-btn {
     background: transparent;
-    border: 2px solid var(--color-border);
-    color: var(--color-text);
-    padding: 0.8rem;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    padding: 0.8rem 1.5rem;
     font-family: var(--font-heading);
     font-size: 1rem;
     letter-spacing: 0.1em;
     border-radius: 8px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     transition: all 0.3s ease;
-    position: relative;
 }
 
-.ticket-btn:hover, .calendar-btn:hover {
-    border-color: var(--color-primary);
-    background: rgba(255, 0, 51, 0.1);
-    transform: scale(1.05);
+.calendar-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.calendar-btn:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 0, 51, 0.3);
 }
 
 /* ===== SETLIST PAGE ===== */
@@ -541,19 +466,20 @@ body::before {
     padding: 0 2rem;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .setlist-item {
     background: var(--color-bg-card);
     border: 2px solid var(--color-border);
     border-radius: 12px;
-    padding: 1.5rem;
+    padding: 1.5rem 2rem;
     display: grid;
     grid-template-columns: auto 1fr auto;
-    align-items: center;
     gap: 2rem;
+    align-items: center;
     transition: all 0.3s ease;
+    cursor: pointer;
     position: relative;
     overflow: hidden;
 }
@@ -561,31 +487,30 @@ body::before {
 .setlist-item::before {
     content: '';
     position: absolute;
+    left: 0;
     top: 0;
-    left: -100%;
-    width: 100%;
+    width: 0;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 0, 51, 0.05), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 0, 51, 0.1), transparent);
     transition: all 0.5s ease;
 }
 
 .setlist-item:hover::before {
-    left: 100%;
+    width: 100%;
 }
 
 .setlist-item:hover {
     border-color: var(--color-primary);
-    transform: translateX(5px);
+    background: rgba(255, 0, 51, 0.05);
+    transform: translateX(10px) scale(1.02);
     box-shadow: 0 5px 20px rgba(255, 0, 51, 0.2);
 }
 
 .setlist-number {
     font-family: var(--font-heading);
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--color-text-dim);
-    font-weight: 600;
-    min-width: 60px;
-    text-align: center;
+    min-width: 50px;
     transition: all 0.3s ease;
 }
 
@@ -597,26 +522,25 @@ body::before {
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 0.5rem;
-    flex-wrap: wrap;
+    margin-bottom: 0.2rem;
 }
 
 .setlist-song {
     font-family: var(--font-heading);
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: var(--color-text);
     letter-spacing: 0.05em;
 }
 
 .setlist-artist {
     color: var(--color-text-dim);
-    font-size: 1.1rem;
-    font-style: italic;
+    font-size: 1rem;
 }
 
+/* ===== SONG BADGES ===== */
 .song-badge {
     padding: 0.3rem 0.8rem;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 0.7rem;
     font-weight: 600;
     letter-spacing: 0.15em;
@@ -687,6 +611,12 @@ body::before {
 .platform-btn svg {
     width: 24px;
     height: 24px;
+}
+
+.platform-btn img {
+    width: 24px;
+    height: 24px;
+    display: block;
 }
 
 .platform-btn:hover {
@@ -972,45 +902,20 @@ body::before {
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .main-nav {
-        padding: 0 1rem;
-        height: 70px;
+        padding: 0 1.5rem;
     }
     
     .nav-logo {
-        height: 45px;
-        left: 1rem;
-        transform: none;
-        position: relative;
+        height: 50px;
     }
     
     .nav-links {
-        gap: 0.8rem;
-        margin-left: auto;
+        gap: 1rem;
     }
     
     .nav-btn {
-        width: 42px;
-        height: 42px;
-    }
-    
-    .nav-btn svg {
-        width: 20px;
-        height: 20px;
-    }
-    
-    /* Fix pour empêcher le texte glitch de bouger la page sur mobile */
-    .hero-title {
-        min-width: 100%;
-        display: inline-block;
-        white-space: nowrap;
-        overflow: hidden;
-    }
-    
-    .glitch-container {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        overflow: hidden;
+        width: 45px;
+        height: 45px;
     }
     
     .setlist-item {
@@ -1039,44 +944,6 @@ body::before {
 }
 
 @media (max-width: 480px) {
-    .main-nav {
-        padding: 0 0.5rem;
-        height: 65px;
-    }
-    
-    .nav-logo {
-        height: 40px;
-    }
-    
-    .nav-links {
-        gap: 0.5rem;
-    }
-    
-    .nav-btn {
-        width: 38px;
-        height: 38px;
-    }
-    
-    .nav-btn svg {
-        width: 18px;
-        height: 18px;
-    }
-    
-    /* Fix supplémentaire pour les petits écrans */
-    .hero-title {
-        min-width: 100%;
-        display: inline-block;
-        white-space: nowrap;
-        overflow: hidden;
-    }
-    
-    .glitch-container {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        overflow: hidden;
-    }
-    
     .section-title {
         flex-direction: column;
         gap: 1rem;
