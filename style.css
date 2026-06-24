@@ -689,6 +689,12 @@ body::before {
     height: 24px;
 }
 
+.platform-btn img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
 .platform-btn:hover {
     border-color: var(--color-primary);
     background: rgba(255, 0, 51, 0.1);
