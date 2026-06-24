@@ -1,64 +1,83 @@
 # Wayward Ship - Site Web Amélioré 🤘
 
-## 🆕 Dernières Modifications (30 janvier 2026)
+## 🆕 Dernières Modifications (24 janvier 2026)
 
-### ✅ Changements Appliqués
+### ✅ Nouvelles Fonctionnalités
 
-1. **🎵 Logo Deezer Officiel**
-   - Remplacement du logo Deezer personnalisé (gradient coloré) par le **vrai logo officiel de Deezer**
-   - Design authentique avec la grille de carrés caractéristique de Deezer
+1. **📄 Page de Contact Complète**
+   - Adresse email: waywardshipofficiel@gmail.com
+   - Numéro de téléphone: 07 69 34 10 08
+   - Conditions de performance détaillées
+   - Clauses textuelles (pas d'événements privés, stand de merch obligatoire, etc.)
+   - Boutons CTA pour email et téléphone
+   - Lien "Contact" accessible dans le footer en petit texte
+
+2. **📱 Design Responsive Optimisé**
+   - Adaptation complète pour mobile (480px et moins)
+   - Adaptation pour tablettes (768px et moins)
+   - Logo repositionné en haut à gauche sur mobile
+   - Navigation refondue pour petits écrans
+   - Toutes les sections s'affichent correctement sur tous les appareils
+   - Textes redimensionnés et espacements ajustés
+
+3. **🎨 Logos PNG Officiels**
+   - Remplacement des logos SVG par les vraies images Spotify et Deezer
+   - Design authentique et professionnel
    - Appliqué sur les 8 chansons de la setlist
 
-2. **💡 Correction de l'Effet de Lumière sur le Logo**
-   - Suppression du `drop-shadow` rouge qui créait un halo lumineux indésirable autour du logo principal
-   - Le logo reste net et propre tout en conservant les animations au survol
-   - Transitions fluides maintenues
+4. **🔗 Lien Linktree Ajouté**
+   - Nouveau lien vers https://linktr.ee/waywardshipofficiel
+   - Intégré dans les réseaux sociaux du footer
+
+5. **🎵 Setlist Mise à Jour**
+   - **My Apocalypse** – Escape The Fate (remplace Two Faced)
+   - **My Curse** – Killswitch Engage (remplace Carrion)
+   - 8 covers metalcore et nu metal total
+
+6. **🌐 Navigation Optimisée**
+   - Redirection vers index.html depuis contact.html
+   - Boutons de navigation fonctionnels depuis toutes les pages
+   - Gestion intelligente des transitions
 
 ---
 
 ## Modifications Précédentes
 
-### ✅ Changements Effectués
+### ✅ Changements Effectués (Janvier 2026)
 
 1. **🎵 Musique d'Ambiance Activée par Défaut**
-   - La musique démarre automatiquement au chargement de la page
-   - Si le navigateur bloque l'autoplay, elle démarre au premier clic
-   - Volume défini à 30%
-   - Bouton de contrôle toujours disponible en bas à droite
+   - Démarre automatiquement au chargement de la page
+   - Si autoplay bloqué, démarre au premier clic
+   - Volume 30%
 
 2. **📧 Email Mis à Jour**
-   - Nouveau contact: **waywardshipofficiel@gmail.com**
-   - Mis à jour dans le footer et la politique de confidentialité
+   - waywardshipofficiel@gmail.com partout sur le site
+   - Footer, politique de confidentialité, page contact
 
 3. **🔊 Sons de Clics Optimisés**
-   - Sons activés uniquement sur:
-     - Clic sur les boutons de navigation
-     - Survol et clic sur les éléments de la setlist
-     - Survol et clic sur les cartes de concert (sauf "aucune date")
-     - Clic sur les boutons Spotify/Deezer
-     - Clic sur les boutons de modal et actions
+   - Sons uniquement sur: navigation, setlist, concerts, modals
    - Sons désactivés pour les interactions générales
 
-4. **🎵 Liens Directs vers Spotify/Deezer**
-   - Clic sur le bouton Spotify → Ouvre directement la recherche Spotify
-   - Clic sur le bouton Deezer → Ouvre directement la recherche Deezer
-   - Plus besoin de modal de sélection
+4. **🎵 Liens Directs Spotify/Deezer**
+   - Clics directs vers les plateformes
+   - Pas de modal de sélection
 
 5. **🖱️ Curseur Rouge Simplifié**
-   - Curseur personnalisé rouge sur tout le site
-   - Forme de flèche simple et élégante
-   - Plus de pentagramme complexe
+   - Curseur personnalisé épuré
 
 ## Structure des Fichiers
 
 ```
 wayward-ship/
-├── index.html          # HTML avec vrais logos Deezer
-├── style.css           # CSS sans effet drop-shadow sur le logo
-├── script.js           # JavaScript avec musique auto et sons optimisés
+├── index.html          # Page d'accueil avec nav, hero, setlist
+├── contact.html        # Page de contact et booking
+├── style.css           # Styles complets + responsive
+├── script.js           # Interactions, navigation, sons
 ├── fond.mp3            # Musique d'ambiance
 ├── clique.mp3          # Son de clic
-├── logo.png            # Logo principal (sans halo rouge)
+├── spotify.png         # Logo Spotify officiel
+├── deezer.png          # Logo Deezer officiel
+├── logo.png            # Logo principal
 ├── logo1.png           # Favicon
 └── Frost_Scream.otf    # Police custom
 ```
@@ -67,61 +86,94 @@ wayward-ship/
 
 1. **Illuminate the Path** – Arch Enemy
 2. **Darkside** – Bring Me The Horizon
-3. **Two Faced** – Linkin Park
-4. **Carrion** – Parkway Drive
+3. **My Apocalypse** – Escape The Fate
+4. **My Curse** – Killswitch Engage
 5. **Cirice** – Ghost
 6. **Tears Don't Fall** – Bullet for My Valentine
 7. **ATWA** – System of a Down
 8. **The Devil In I** – Slipknot
 
+## Conditions de Performance
+
+- ✅ Zones: Rayon raisonnable autour de Saint-Dizier (négociable)
+- ✅ Communication: Promo mutuelle réseaux sociaux
+- ✅ Affiches: Produites en interne
+- ❌ IA: Refus total, pas de contenu IA
+- ✅ Stand de Merch: **Non négociable** (t-shirts + stickers)
+- ✅ Flexibilité: Tous types d'endroits
+- ❌ Événements privés: Refusés, public/semi-public uniquement
+- ✅ Setup: Backing track pour compléter le son
+
 ## Fonctionnalités Principales
 
 ### 🎵 Musique et Sons
-- **Musique d'ambiance** : Démarre automatiquement (fond.mp3)
-- **Effets sonores** : Clics et survols sur éléments interactifs (clique.mp3)
-- **Contrôle** : Bouton flottant pour activer/désactiver
+- Musique d'ambiance auto (fond.mp3)
+- Effets sonores contextuels (clique.mp3)
+- Bouton flottant de contrôle
 
 ### 🎸 Streaming Musical
-- **Spotify** : Logo officiel Spotify + clic direct → recherche Spotify
-- **Deezer** : Logo officiel Deezer + clic direct → recherche Deezer
-- Pas besoin de choisir de plateforme
+- Logos officiels Spotify et Deezer
+- Liens directs vers les plateformes
+- Recherche automatique par chanson
 
 ### 📅 Calendrier
-- Export .ics pour Google Calendar, Outlook, Apple Calendar
-- Rappel automatique 2h avant le concert
+- Export .ics (Google Calendar, Outlook, Apple Calendar)
+- Rappels automatiques 2h avant
+
+### 📱 Design Responsive
+- Mobile (480px-): Navigation compacte, textes adaptés
+- Tablette (768px): Layout intermédiaire
+- Desktop: Expérience complète
 
 ### ✨ Animations
-- Effet glitch sur le titre
-- Particules rouges qui suivent le curseur
-- Secousse de l'écran au clic du logo
-- Animations au survol des éléments
-- Logo principal sans halo lumineux
+- Glitch sur le titre
+- Particules rouges au curseur
+- Shake au clic du logo
+- Animations au survol
+- Transitions fluides
+
+## Réseaux Sociaux
+
+- 🎵 Linktree: https://linktr.ee/waywardshipofficiel
+- 📺 YouTube: @WaywardShip
+- 🎬 TikTok: @waywardship
+- 📷 Instagram: @waywardshipofficiel
+- 𝕏 X: @VraiWaywardShip
 
 ## Ajuster les Sons
 
-Dans `script.js`, vous pouvez modifier les volumes :
+Dans `script.js`:
 
 ```javascript
-clickSound.volume = 0.3; // Volume du clic (0.0 à 1.0)
-ambientAudio.volume = 0.3; // Volume de la musique (0.0 à 1.0)
+clickSound.volume = 0.3; // Clic (0.0-1.0)
+ambientAudio.volume = 0.3; // Musique (0.0-1.0)
+hoverSound.volume = 0.1; // Survol (0.0-1.0)
 ```
 
-Pour le son de survol :
-```javascript
-hoverSound.volume = 0.1; // Volume du survol (0.0 à 1.0)
-```
+## Contact & Booking
 
-## Compatibilité Navigateurs
+📧 **Email:** waywardshipofficiel@gmail.com
+📞 **Téléphone:** 07 69 34 10 08
+🔗 **Linktree:** https://linktr.ee/waywardshipofficiel
+
+## Compatibilité
 
 - ✅ Chrome/Edge (recommandé)
 - ✅ Firefox
 - ✅ Safari
-- ⚠️ Autoplay peut être bloqué par les navigateurs (la musique démarre au premier clic dans ce cas)
+- ✅ Mobile (iOS/Android)
+- ⚠️ Autoplay peut être bloqué (musique au 1er clic)
 
-## Contact
+## Notes Techniques
 
-Pour toute question : **waywardshipofficiel@gmail.com**
+- HTML5 sémantique
+- CSS3 avec variables de couleur
+- JavaScript vanilla (pas de dépendances)
+- Responsive design mobile-first
+- Optimisé pour tous les appareils
 
 ---
 
 🤘 **Wayward Ship** - Metalcore depuis 2023
+
+*Groupe amateur en construction avec backing track. Opposition totale à l'IA. Stand de merch obligatoire.*
