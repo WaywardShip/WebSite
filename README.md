@@ -1,6 +1,6 @@
 # Wayward Ship - Site Web Amélioré 🤘
 
-## 🆕 Dernières Modifications (24 janvier 2026)
+## 🆕 Dernières Modifications (24 juin 2026)
 
 ### ✅ Nouvelles Fonctionnalités
 
@@ -43,7 +43,7 @@
 
 ## Modifications Précédentes
 
-### ✅ Changements Effectués (Janvier 2026)
+### ✅ Changements Effectués (Juin 2026)
 
 1. **🎵 Musique d'Ambiance Activée par Défaut**
    - Démarre automatiquement au chargement de la page
