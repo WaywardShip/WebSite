@@ -975,6 +975,156 @@ body::before {
     margin-top: 2rem;
 }
 
+/* ===== CONTACT PAGE ===== */
+.contact-section,
+.conditions-section,
+.cta-section {
+    padding: 3rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    gap: 1.5rem;
+    padding: 2rem;
+    border: 2px solid var(--color-border);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    border-color: var(--color-primary);
+    background: rgba(255, 0, 51, 0.05);
+    transform: translateY(-5px);
+}
+
+.contact-icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-icon svg {
+    width: 30px;
+    height: 30px;
+    color: var(--color-primary);
+}
+
+.contact-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-primary);
+}
+
+.contact-link {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: var(--color-primary);
+}
+
+/* Conditions Text */
+.conditions-text {
+    max-width: 900px;
+    margin: 2rem auto;
+}
+
+.conditions-text h3 {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.conditions-text p {
+    color: var(--color-text-dim);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    background: rgba(255, 0, 51, 0.05);
+    border: 2px solid var(--color-primary);
+    border-radius: 8px;
+}
+
+.cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    color: var(--color-text-dim);
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    border: 2px solid var(--color-primary);
+    background: transparent;
+    color: var(--color-text);
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.cta-btn:hover {
+    background: var(--color-primary);
+    color: #000;
+    transform: scale(1.05);
+}
+
+.cta-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Legal Link Text */
+.legal-link-text {
+    color: var(--color-text-dim);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.legal-link-text:hover {
+    color: var(--color-primary);
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .main-nav {

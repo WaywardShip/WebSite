@@ -73,6 +73,12 @@ window.addEventListener('DOMContentLoaded', function() {
     var pages = document.querySelectorAll('.page');
     
     function switchPage(pageId) {
+        // Si on est sur contact.html, on redirige vers index.html
+        if (window.location.pathname.includes('contact.html')) {
+            window.location.href = 'index.html#' + pageId;
+            return;
+        }
+        
         pages.forEach(function(page) {
             page.classList.remove('active');
         });
